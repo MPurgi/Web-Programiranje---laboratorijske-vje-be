@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drugi zadatak</title>
+</head>
+<body>
+    <h1><a href="index.html">OBRAZAC</a></h1>
+
+    <form action="poslano.html" method="get">
+
+        <p>
+            <label for="korisnicko_ime">Korisničko ime:</label>
+            <input type="text" id="korisnicko_ime"
+            name="korisnicko_ime" size="25"
+            placeholder="Unesite korisničko ime">
+        </p>
+
+        <p>
+            <label for="lozinka">Lozinka:</label>
+            <input type="password" id="lozinka"
+            name="lozinka" size="25"
+            placeholder="Unesite lozinku">
+        </p>
+
+        <p>
+            <label for="ocjena">Ocjena:</label>
+            <select id="ocjena" name="ocjena">
+                <option value="nedovoljan">nedovoljan</option>
+                <option value="dovoljan">dovoljan</option>
+                <option value="dobar">dobar</option>
+                <option value="vrlo dobar">vrlo dobar</option>
+                <option value="izvrstan">izvrstan</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="komentar">Komentar:</label><br>
+            <textarea id="komentar" name="komentar"
+            rows="7" cols="40"
+            placeholder="Unesite komentar"></textarea>
+        </p>
+
+        <p>Usmena ocjena studenta:</p>
+
+        <input type="radio" id="komunikativan"
+            name="usmena_ocjena" value="komunikativan">
+        <label for="komunikativan">komunikativan</label><br>
+
+        <input type="radio" id="samostalan"
+            name="usmena_ocjena" value="samostalan">
+        <label for="samostalan">samostalan</label><br>
+
+        <input type="radio" id="radisan"
+            name="usmena_ocjena" value="radisan">
+        <label for="radisan">radisan</label><br>
+
+        <input type="radio" id="nista"
+            name="usmena_ocjena" value="nista" checked>
+        <label for="nista">Ništa od navedenog</label><br>
+
+        <table>
+            <tr>
+                <td>
+                    <button type="submit">Pošalji</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="reset">Poništi</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
