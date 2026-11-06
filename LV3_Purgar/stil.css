@@ -1,0 +1,28 @@
+thead th {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #d6eaf8;
+}
+
+tbody tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+table {
+    border: 2px solid #343a40;
+}
+
+p:first-of-type {
+    color: red;
+    font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+    .slike img {
+        margin-bottom: 10px;
+    }
+}
