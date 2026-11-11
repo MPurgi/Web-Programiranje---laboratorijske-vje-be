@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV4prviZad</title>
+</head>
+<body>
+    <h1>LV4prviZad</h1>
+
+    <script>
+        // 1. var, let, const
+        var a="var vrijednost";
+        let b="let vrijednost";
+        const c="const vrijednost";
+        console.log(a,b,c);
+        //2. promjena vrijednosti
+        a="var vrijednost promijenjena";
+        b="let vrijednost promijenjena";
+        console.log(a,b);
+        //3. niz znakova
+        let recenica = "Ovo je prvi JS string primjer";
+        console.log(recenica, "- duljina:", recenica.length);
+        //4. tri metode
+        console.log(recenica.toUpperCase());
+        console.log(recenica.slice(0, 7));
+        console.log(recenica.replace("prvi", "drugi"));
+        console.log(recenica);
+        //5. nizovi
+        const vozila = new Array("Avion", "Auto", "Vlak", "Bicikl", "Brod", "Motocikl", "Podmornica");
+        //6. petlja for
+        for(let i=0; i<vozila.length; i++){
+            console.log(`Vozilo broj ${i+1} je: ${vozila[i]}`);
+        }
+        //7. petlja for of
+        vozila.push("Traktor");
+        for(const vozilo of vozila){
+            console.log(vozilo);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrugiZadLV4</title>
+</head>
+<body>
+    <h1>DrugiZadLV4</h1>
+
+    <script>
+
+                // tri načina definiranja funkcije
+        function ispisiParametar1(parametar) {      // deklaracija funkcije
+            console.log(parametar);
+        }
+        
+        const ispisiParametar2 = function (parametar) {   // funkcijski izraz
+            console.log(parametar);
+        };
+        
+        const ispisiParametar3 = (parametar) => {    // streličasta funkcija (ES6)
+            console.log(parametar);
+        };
+        
+        ispisiParametar1("Prva");
+        ispisiParametar2("Druga");
+        ispisiParametar3("Treća");
+        
+        function vratiIme(ime) {
+            const x = ime;
+            function f() {
+                return x;
+            }
+            return f;
+        }
+        
+        const y = vratiIme("Hrvoje Horvat");
+        console.log(y);     // Ispisuje funkciju f, a ne tekst
+        
+        // const z = vratiIme()();
+        // y nije tekst jer vratiIme vraća funkciju f, a ne njezin rezultat.
+        // Da bi se dobio tekst, vraćenu funkciju treba još jednom pozvati y().
+        // z je undefined jer je vratiIme pozvana bez argumenta (ime=undefined),
+        // f() vraća x koji je undefined.
+
+        // Ispravljeni poziv 
+        const z = vratiIme("Hrvoje Horvat")();
+        // console.log(z);
+
+        // Globalna varijabla
+        const ime = "Pero Perić";
+
+        // IIFE
+        (function(x) {
+            console.log("Predano ime je: " + x);
+        })(ime);
+
+        // Streličasta funkcija
+        const vratiImeStrelica = (ime) => () => ime;
+        console.log(vratiImeStrelica("Hrvoje Horvat")());
+    </script>
+
+</body>
+</html>
