@@ -1,0 +1,39 @@
+
+.spremnici {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.spremnik {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.kvadrati {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.kvadrat {
+    width: 100px;
+    height: 100px;
+    cursor: move;
+}
+
+.crna {
+    background-color: black;
+}
+
+.crvena {
+    background-color: red;
+}
+
+/* Poruka nakon razvrstavanja */
+#poruka {
+    font-weight: bold;
+    margin-top: 20px;
+}

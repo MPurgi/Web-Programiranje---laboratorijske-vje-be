@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak2</title>
+</head>
+<body>
+    
+    <h1>Dohvaćanje JSON datoteke</h1>
+
+    <script>
+        async function dohvatiJSON(){
+            try{
+                const odgovor = await fetch("data.json");
+
+                if(!odgovor.ok){
+                    throw new Error(`HTTP ${odgovor.status}`);
+                }
+
+                const osobe = await odgovor.json();
+
+                console.log("Dohvaćanje osobe: ", structuredClone(osobe));
+
+                osobe[1] = {
+                    ime: "Mateo",
+                    godina: 20,
+                    zaposlen: false,
+                    alergije: null,
+                    adresa:{
+                        ulica:"Osječka",
+                        broj: 1,
+                        posta: 31000
+                    }
+                };
+
+                localStorage.setItem("osobe", JSON.stringify(osobe));
+
+                const spremljeneOsobe = JSON.parse(
+                    localStorage.getItem("osobe")
+                );
+
+                console.log("Podaci iz localStorage: ", spremljeneOsobe);
+
+            } catch (greska){
+                console.error("Učitavanje nije uspjelo: ", greska);
+            }
+        }
+
+        dohvatiJSON();
+    </script>
+
+</body>
+</html>

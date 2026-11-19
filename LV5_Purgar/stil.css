@@ -1,0 +1,12 @@
+.zelena{
+    color:green;
+}
+
+.slike img {
+    border: 4px solid transparent;
+    cursor: pointer;
+}
+
+.slike img.crni-obrub {
+    border-color: black;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurgarZad1</title>
+</head>
+<body>
+    
+    <h1>JSON</h1>
+    <pre id="json"></pre>
+
+    <script>
+
+        const student = {
+            ime: "Tvoje ime",
+            prezime: "Tvoje prezime",
+            godinaStudija: 1,
+            smjer: "Web programiranje"
+        };
+
+        const mojJSON = JSON.stringify(student, null, 4);
+
+        document.getElementById("json").textContent = mojJSON;
+
+        const kopija = JSON.parse(mojJSON);
+
+        console.log("Koprija prije promjene: ", kopija);
+
+        kopija.ime = "Promijenjeno ime";
+
+        console.log("Izvorni objekt: ", student);
+        console.log("Kopija nakon promjene: ", kopija);
+    
+    </script>
+</body>
+</html>
